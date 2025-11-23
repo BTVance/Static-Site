@@ -3,11 +3,11 @@ from enum import Enum
 from enum import Enum
 
 class TextType(Enum):
-    PLAIN_TEXT = "text"
-    BOLD_TEXT = "bold"
-    ITALIC_TEXT = "italic"
-    CODE_TEXT = "code"
-    LINK_TEXT = "link"
+    TEXT = "text"
+    BOLD = "bold"
+    ITALIC = "italic"
+    CODE = "code"
+    LINK = "link"
     IMAGE = "image"
 
 
