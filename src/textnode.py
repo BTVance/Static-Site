@@ -2,7 +2,6 @@ from enum import Enum
 
 from enum import Enum
 
-import htmlnode
 
 class TextType(Enum):
     TEXT = "text"

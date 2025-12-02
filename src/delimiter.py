@@ -8,13 +8,14 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
         else:
             parts = node.text.split(delimiter)
             temp_split_nodes = []
+            if len(parts) % 2 == 0:
+                raise Exception("Invalid Markdown Syntax")
             for i, part in enumerate(parts):
-                if len(parts) % 2 == 0:
-                    raise Exception("Invalid Markdown Syntax")
-                if i % 2 == 1:
-                    if i % 2 == 0:
+                if i % 2 == 0:
                        temp_split_nodes.append(TextNode(part, TextType.TEXT))
                 else:
                     temp_split_nodes.append(TextNode(part, text_type))
             new_nodes.extend(temp_split_nodes)
     return new_nodes
+def extract_markdown_images(text):
+    
